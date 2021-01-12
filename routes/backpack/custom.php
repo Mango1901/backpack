@@ -19,5 +19,7 @@ Route::group([
         \Alert::success('Impersonating stopped.')->flash();
         return redirect("admin/user");
     });
+    Route::crud('permission', 'PermissionCrudController');
+    Route::crud('role', 'RoleCrudController');
     Route::crud('user', 'UserCrudController');
 }); // this should be the absolute last line of this file
